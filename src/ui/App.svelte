@@ -1,6 +1,7 @@
 <script>
 	import Header from './Header.svelte'
-	import Content from './Content.svelte'
+	import Controls from './Controls.svelte'
+	import Animator from './Animator.svelte'
 	import Mode from './Mode.svelte'
 </script>
 
@@ -11,7 +12,10 @@
 			<h1>Smart Washing</h1>
 			<h2>Machine</h2>
 		</div>
-		<Content />
+		<div class="content-body">
+			<Controls />
+			<Animator />
+		</div>
 		<Mode />
 	</div>
 </div>

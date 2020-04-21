@@ -1,3 +1,7 @@
+<script>
+	import { selectedMode } from './State'
+</script>
+
 <div class="header">
 	<button class="back">
 		<svg fill="#222" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -7,6 +11,6 @@
 		</svg>
 	</button>
 	<button class="timer">
-		<span>23:45</span>
+		<span>{$selectedMode.minutes} : 00</span>
 	</button>
 </div>
