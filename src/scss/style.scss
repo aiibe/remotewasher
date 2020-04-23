@@ -43,7 +43,6 @@ button {
 }
 
 svg {
-	color: $primary-color;
 	opacity: 0.5;
 	width: 2rem;
 }
@@ -131,6 +130,31 @@ svg {
 		padding: 2rem;
 		margin: 1rem 0;
 		position: relative;
+
+		svg.power-run {
+			opacity: 1;
+			fill: #0fe193;
+			animation-name: power;
+			animation-duration: 1.5s;
+			animation-iteration-count: infinite;
+		}
+
+		@keyframes power {
+			0% {
+				fill: #0fe193;
+			}
+			50% {
+				fill: #0fe19450;
+			}
+			100% {
+				fill: #0fe193;
+			}
+		}
+
+		svg.power-on {
+			fill: #0fe193;
+			opacity: 1;
+		}
 
 		svg {
 			margin: 1rem;
