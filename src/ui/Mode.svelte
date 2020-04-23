@@ -1,9 +1,9 @@
 <script>
-	import { selectedMode, timer, isRunning } from './State'
-	const mode = [{ name: 'Standard', minutes: 45 }, { name: 'Gentle', minutes: 30 }, { name: 'Super Fast', minutes: 1 }]
+	import { selectedMode, timer, isRunning, power } from './State'
+	const mode = [{ name: 'Standard', minutes: 45 }, { name: 'Gentle', minutes: 30 }, { name: 'Super Fast', minutes: 2 }]
 
 	function setMode(m) {
-		if (!$isRunning) {
+		if (!$isRunning && $power) {
 			selectedMode.set(m.name)
 			timer.set(m.minutes * 60 * 1000) // ms
 		}
