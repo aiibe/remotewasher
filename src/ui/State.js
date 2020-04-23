@@ -1,7 +1,8 @@
 import { writable } from 'svelte/store'
 
 const isRunning = writable(false)
-const waterWindow = writable(false)
-const selectedMode = writable({ name: 'Standard', minutes: 45 })
+const modalOpen = writable(false)
+const selectedMode = writable('Standard')
+const timer = writable(45 * 60 * 1000) // ms
 
-export { isRunning, waterWindow, selectedMode }
+export { isRunning, modalOpen, selectedMode, timer }

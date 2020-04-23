@@ -1,5 +1,10 @@
 <script>
-	import { selectedMode } from './State'
+	import { derived } from 'svelte/store'
+	import { timer } from './State'
+
+	let minutes = derived(timer, $timer => Math.floor(($timer % (1000 * 60 * 60)) / (1000 * 60)).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }))
+	let seconds = derived(timer, $timer => Math.floor(($timer % (1000 * 60)) / 1000).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false }))
+
 </script>
 
 <div class="header">
@@ -11,6 +16,8 @@
 		</svg>
 	</button>
 	<button class="timer">
-		<span>{$selectedMode.minutes} : 00</span>
+		<span>{$minutes}</span>
+		<span>:</span>
+		<span>{$seconds}</span>
 	</button>
 </div>

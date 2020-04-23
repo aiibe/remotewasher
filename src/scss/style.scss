@@ -76,6 +76,8 @@ svg {
 	align-items: flex-start;
 
 	.timer {
+		display: grid;
+		grid-template-columns: 3rem 1rem 3rem;
 		cursor: initial;
 		border: 1px solid #fff;
 		width: 11rem;
@@ -89,6 +91,8 @@ svg {
 			font-weight: 300;
 			font-size: 2rem;
 			opacity: 0.6;
+			text-align: end;
+			padding: 0 0.5rem;
 		}
 	}
 }
@@ -124,7 +128,16 @@ svg {
 	margin: auto;
 
 	button {
+		padding: 2rem;
 		margin: 1rem 0;
+		position: relative;
+
+		svg {
+			margin: 1rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 }
 
