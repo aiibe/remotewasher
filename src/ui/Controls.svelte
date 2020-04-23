@@ -4,8 +4,8 @@
 
 	let interval
 	function runMachine() {
-		// power.set(!$power)
-		isRunning.set(!$isRunning)
+
+		if ($power) isRunning.set(!$isRunning)
 
 		if ($isRunning) {
 			interval = setInterval(() => {

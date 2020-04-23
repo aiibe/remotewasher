@@ -3,9 +3,10 @@
 	import Controls from './Controls.svelte'
 	import Animator from './Animator.svelte'
 	import Mode from './Mode.svelte'
+	import Modal from './Modal.svelte'
 </script>
 
-<div class="container">
+<div class="app">
 	<div class="wrap">
 		<Header />
 		<div class="greeting">
@@ -18,4 +19,5 @@
 		</div>
 		<Mode />
 	</div>
+	<Modal />
 </div>
