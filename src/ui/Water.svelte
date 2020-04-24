@@ -3,8 +3,10 @@
 	import { fly } from 'svelte/transition'
 	import { quintOut } from 'svelte/easing'
 	import { onMount } from 'svelte'
+	import { derived } from 'svelte/store'
 
 	const maxWaterLevel = 1200
+	const waterLevelRounded = derived(waterLevel, $waterLevel => Math.round($waterLevel))
 
 	let mover, moverTop, moverHeight
 
@@ -96,6 +98,6 @@
 	</div>
 	<div class="greeting current-level">
 		<h2>Current</h2>
-		<h1>{Math.round($waterLevel)}</h1>
+		<h1>{$waterLevelRounded}</h1>
 	</div>
 </div>
