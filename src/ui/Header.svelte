@@ -15,15 +15,17 @@
 			</path>
 		</svg>
 	</button>
-	<button class="timer">
-		{#if $power}
-			<span>{$minutes}</span>
-			<span>:</span>
-			<span>{$seconds}</span>
-		{:else}
-			<span> </span>
-			<span> </span>
-			<span> </span>
-		{/if}
-	</button>
+	<div class="time">
+		<button class="timer">
+			{#if $power}
+				<span>{$minutes}</span>
+				<span>:</span>
+				<span>{$seconds}</span>
+			{:else}
+				<span> </span>
+				<span> </span>
+				<span> </span>
+			{/if}
+		</button>
+	</div>
 </div>

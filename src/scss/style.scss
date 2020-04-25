@@ -40,6 +40,10 @@ button {
 			inset 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
 		transform: scale(0.98, 0.98);
 	}
+
+	&:focus {
+		outline: 0;
+	}
 }
 
 svg {
@@ -75,23 +79,24 @@ svg {
 	justify-content: space-between;
 	align-items: flex-start;
 
-	.timer {
-		display: grid;
-		grid-template-columns: 3rem 1rem 3rem;
-		cursor: initial;
-		border: 1px solid #fff;
-		width: 11rem;
-		padding: 0 2rem;
-		background-image: linear-gradient(90deg, #e2e6ec 0%, #e7e9f0 100%);
-		box-shadow: inset -2px -2px 5px 1px rgba(255, 255, 255, 0.8),
-			inset 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
+	.time {
+		.timer {
+			display: flex;
+			cursor: initial;
+			border: 1px solid #fff;
+			width: 11rem;
+			padding: 0 1rem;
+			background-image: linear-gradient(90deg, #e2e6ec 0%, #e7e9f0 100%);
+			box-shadow: inset -2px -2px 5px 1px rgba(255, 255, 255, 0.8),
+				inset 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
 
-		span {
-			display: block;
-			font-weight: 300;
-			font-size: 2rem;
-			text-align: end;
-			padding: 0 0.5rem;
+			span {
+				display: block;
+				font-weight: 300;
+				font-size: 2rem;
+				text-align: end;
+				padding: 0 0.5rem;
+			}
 		}
 	}
 }
@@ -134,11 +139,25 @@ svg {
 		svg.power-run {
 			opacity: 1;
 			fill: #0fe193;
+			-webkit-animation-name: power;
 			animation-name: power;
+			-webkit-animation-duration: 1.5s;
 			animation-duration: 1.5s;
+			-webkit-animation-iteration-count: infinite;
 			animation-iteration-count: infinite;
 		}
 
+		@-webkit-keyframes power {
+			0% {
+				fill: #0fe193;
+			}
+			50% {
+				fill: #0fe19450;
+			}
+			100% {
+				fill: #0fe193;
+			}
+		}
 		@keyframes power {
 			0% {
 				fill: #0fe193;
@@ -200,6 +219,7 @@ svg {
 
 					svg.spinner {
 						width: 100%;
+						-webkit-animation: spinner 1.5s linear infinite;
 						animation: spinner 1.5s linear infinite;
 						opacity: 1;
 
@@ -208,8 +228,15 @@ svg {
 						}
 					}
 
+					@-webkit-keyframes spinner {
+						100% {
+							-webkit-transform: rotate(360deg);
+							transform: rotate(360deg);
+						}
+					}
 					@keyframes spinner {
 						100% {
+							-webkit-transform: rotate(360deg);
 							transform: rotate(360deg);
 						}
 					}
