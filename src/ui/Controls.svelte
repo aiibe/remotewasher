@@ -22,8 +22,8 @@
 		power.set(!$power)
 
 		// Default mode
-		selectedMode.set('Standard')
-		timer.set(45 * 60 * 1000)
+		selectedMode.set('Super Fast')
+		timer.set(1 * 60 * 1000)
 
 		// Switch OFF
 		if (!$power) {
