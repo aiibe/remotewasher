@@ -4,7 +4,7 @@ A working prototype web app built using Svelte to emulate a remote washing machi
 
 Check out his beautiful shot on Dribbble [right here](https://dribbble.com/shots/11018635-Washing-machine).
 
-<img src="https://raw.githubusercontent.com/aiibe/remotewasher/master/src/snapshots/remote-1.png" width="250px"><img src="https://raw.githubusercontent.com/aiibe/remotewasher/master/src/snapshots/remote-2.png" width="250px" style="margin-left: 50px">
+![remote](https://raw.githubusercontent.com/aiibe/remotewasher/master/src/snapshots/remoter.png)
 
 ### Live Demo
 
