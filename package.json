@@ -10,7 +10,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"node-sass": "^4.13.1",
+		"node-sass": "^7.0.0",
 		"parcel-bundler": "^1.12.4",
 		"parcel-plugin-svelte": "^4.0.6",
 		"svelte": "^3.20.1"
